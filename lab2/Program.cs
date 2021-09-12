@@ -45,7 +45,13 @@ namespace lab2
 
                         break;
                     case 2:
-      
+                        Console.WriteLine("Enter base number");
+                        string baseNumber = Console.ReadLine();
+                        Console.WriteLine("Enter highest Number");
+                        String highNumber = Console.ReadLine();
+                        multiplication(Int32.Parse(baseNumber), Int32.Parse(highNumber));
+                        break;
+
 
                     case 3:
                        
@@ -92,6 +98,17 @@ namespace lab2
             Console.WriteLine("2. Multiplication");
             Console.WriteLine("3. Memory Bytes");
 
+        }
+        private static void multiplication(int number1, int number2)
+        {
+            int output = 0;
+
+            for (int i = 0; i <= number2; i++)
+            {
+                output = number1 * i;
+                Console.Write(number2 + " * " + i + " = " + output +"," + " ");
+
+            }
         }
     }
 
